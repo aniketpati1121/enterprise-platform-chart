@@ -10,7 +10,7 @@ spec:
         app.kubernetes.io/name: {{ include "enterprise-platform-chart.name" . }} 
         app.kubernetes.io/instance: {{ .Release.Name }}
      ports: 
-        - port: {{ .Values.service.port}}
-          targetPort: {{ .Values.containerPort }}
+        - name: http 
+          port: {{ .Values.service.port }}
+          targetPort: {{ .Values.image.contanierPort}}
           protocol: TCP
-          name: http
