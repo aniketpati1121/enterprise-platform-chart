@@ -15,4 +15,8 @@ image:
 service:
   type: ClusterIP 
   port: 80 
-  
+
+# Ingress configuration
+ingress:
+  enabled: true
+  host: enterprise.local
